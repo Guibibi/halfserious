@@ -1,0 +1,34 @@
+.container {
+  padding: 20px;
+
+  p {
+    font-weight: bold;
+
+    span {
+      font-weight: 400;
+    }
+  }
+
+  h2 {
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    padding: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+}
+
+.selected {
+  border: 1px solid #05a300 !important;
+}

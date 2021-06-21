@@ -1,0 +1,34 @@
+<div class="container">
+  <div class='card' routerLink="/starships/detail" [state]="{ ship: ship }" *ngFor="let ship of ships">
+    <h2 class="card__title">{{ship.name}}</h2>
+    <span class="card__class">{{ship.model}} - {{ship.starship_class}}</span>
+    <div class='card__icon__container'>
+      <div class="card__icon">
+        <fa-icon [icon]='faRulerHorizontal' size='lg'></fa-icon>
+        <span>{{ship.length}} m</span>
+        <p>Length</p>
+      </div>
+      <div class="card__separator"></div>
+      <div class="card__icon">
+        <fa-icon [icon]='faPeopleCarry' size='lg'></fa-icon>
+        <span>{{ship.crew}}</span>
+        <p>Crew</p>
+      </div>
+      <div class="card__separator"></div>
+      <div class="card__icon">
+        <fa-icon [icon]='faPeopleArrows' size='lg'></fa-icon>
+        <span>{{ship.passengers}}</span>
+        <p>Passengers</p>
+      </div>
+    </div>
+    <h4>Info</h4>
+    <ul class="card__info">
+      <li>Manufacturer: <span>{{ship.manufacturer}}</span></li>
+      <li>Cost: <span>{{ship.cost_in_credits}} credits</span></li>
+      <li>Maximum atmosphering speed: {{ship.max_atmosphering_speed}} mph</li>
+      <li>Hyperdrive rating: <span>{{ship.hyperdrive_rating}}</span></li>
+      <li>MGLT: <span>{{ship.MGLT}} per hour</span></li>
+      <li>Cargo capacity: <span>{{ship.cargo_capacity}} kg</span></li>
+    </ul>
+  </div>
+</div>

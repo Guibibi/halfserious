@@ -1,0 +1,23 @@
+<div class="container">
+  <p *ngIf="ship === undefined">No informations loaded!</p>
+  <p>Name: <span>{{ship.name}}</span></p>
+  <p>Model: <span>{{ship.model}}</span></p>
+  <p>Class: <span>{{ship.starship_class}}</span></p>
+  <p>Manufacturer: <span>{{ship.manufacturer}}</span></p>
+  <p>Cost: <span>{{ship.cost_in_credits}}</span> credits</p>
+  <p>Length: <span>{{ship.length}}</span></p>
+  <p>Crew: <span>{{ship.crew}}</span></p>
+  <p>Passengers: <span>{{ship.passengers}}</span></p>
+  <p>Maximum atmoshperic speed: <span>{{ship.max_atmosphering_speed}}</span></p>
+  <p>Hyperdrive rating: <span>{{ship.hyperdrive_rating}}</span></p>
+  <p>MGLT: <span>{{ship.MGLT}}</span></p>
+  <p>Cargo capacity: <span>{{ship.cargo_capacity}}</span></p>
+  <p>Consumables: <span>{{ship.consumables}}</span></p>
+  <p>Films: <span>{{ship.films}}</span></p>
+  <h2 *ngIf="pilots">Pilots</h2>
+  <div class="card">
+    <span *ngFor="let pilot of pilots" [class.selected]="pilot === selectedPilot"
+      (click)='selectedPilot = pilot'>{{pilot.name}}</span>
+  </div>
+  <app-pilot-details *ngIf="selectedPilot" [pilot]='selectedPilot'></app-pilot-details>
+</div>
